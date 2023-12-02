@@ -1,0 +1,36 @@
+# sets up the basic stuff you need on a new mac
+# to run: brew bundle --file=Brewfile_initial
+
+# for homebrew
+tap "homebrew/bundle"
+
+# Web browsers
+cask "google-chrome"
+cask "firefox"
+
+# tools that you just need
+brew "midnight-commander"
+brew "wget"
+cask "sublime-text"
+cask "visual-studio-code"
+cask "github"
+cask "warp"
+
+# tools for development
+cask "docker"
+cask "postman"
+
+# tools for office work
+cask "libreoffice"
+
+# tools for communication
+cask "messenger"
+
+# tools for image editing
+cask "gimp"
+
+# tools for remote access
+brew "tailscale"
+
+# tools for file sharing
+cask "dropbox"
