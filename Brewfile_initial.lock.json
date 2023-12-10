@@ -77,6 +77,18 @@
         "options": {
           "full_name": "dropbox"
         }
+      },
+      "microsoft-remote-desktop": {
+        "version": "10.9.4",
+        "options": {
+          "full_name": "microsoft-remote-desktop"
+        }
+      },
+      "whatsapp": {
+        "version": "2.23.23.82",
+        "options": {
+          "full_name": "whatsapp"
+        }
       }
     },
     "brew": {

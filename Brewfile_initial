@@ -25,12 +25,14 @@ cask "libreoffice"
 
 # tools for communication
 cask "messenger"
+cask "whatsapp"
 
 # tools for image editing
 cask "gimp"
 
 # tools for remote access
-brew "tailscale"
+# brew "tailscale" # this is not working yet
+cask "microsoft-remote-desktop"
 
 # tools for file sharing
 cask "dropbox"

@@ -1,0 +1,9 @@
+# sets up the suff you need for kubernetes development
+# to run: brew bundle --file=Brewfile_kubernetes
+
+# managing kubernetes
+brew "helm"
+brew "stern"
+brew "k9s"
+cask "lens"
+
