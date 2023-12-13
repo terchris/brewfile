@@ -18,8 +18,12 @@ cask "github"
 cask "warp"
 
 # tools for development
-cask "docker"
 cask "postman"
+
+# tools virtual machines and containers
+cask "docker"
+cask "utm"
+
 
 # tools for office work
 cask "libreoffice"
