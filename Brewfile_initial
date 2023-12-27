@@ -19,6 +19,8 @@ cask "warp"
 
 # tools for development
 cask "postman"
+brew "node"
+brew "yarn"
 
 # tools virtual machines and containers
 cask "docker"
