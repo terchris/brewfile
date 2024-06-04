@@ -22,6 +22,8 @@ cask "postman"
 brew "nvm" 
 # for nvm remember to set the path
 brew "yarn"
+# a faster npm manager for development 
+brew install pnpm
 
 # tools virtual machines and containers
 cask "docker"
