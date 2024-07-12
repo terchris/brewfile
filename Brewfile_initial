@@ -24,6 +24,8 @@ brew "nvm"
 brew "yarn"
 # a faster npm manager for development 
 brew install pnpm
+#for editing ansible in vscode 
+brew install ansible
 
 # tools virtual machines and containers
 cask "docker"
