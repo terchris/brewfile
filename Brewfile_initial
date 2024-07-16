@@ -31,6 +31,9 @@ brew install ansible
 cask "docker"
 cask "utm"
 
+# tools for working with kubernetes
+brew install --cask lens
+brew install k9s
 
 # tools for office work
 cask "libreoffice"
