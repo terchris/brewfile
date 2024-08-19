@@ -30,13 +30,14 @@ brew install ansible
 # tools virtual machines and containers
 cask "docker"
 cask "utm"
+cask "multipass"
 
 # tools for working with kubernetes
 brew install --cask lens
 brew install k9s
 
 # tools for office work
-cask "libreoffice"
+# cask "libreoffice"
 
 # tools for communication
 cask "messenger"
@@ -50,4 +51,4 @@ cask "gimp"
 cask "microsoft-remote-desktop"
 
 # tools for file sharing
-cask "dropbox"
+# cask "dropbox"
