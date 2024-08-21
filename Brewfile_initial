@@ -19,13 +19,20 @@ cask "warp"
 
 # tools for development
 cask "postman"
-brew "nvm" 
-# for nvm remember to set the path
+brew "nvm"
+# After installing nvm, add the following to your shell profile (e.g., ~/.zshrc or ~/.bash_profile):
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+# Then, to install and use the latest LTS version of Node.js, run:
+# nvm install --lts
+# nvm use --lts
 brew "yarn"
 # a faster npm manager for development 
-brew install pnpm
-#for editing ansible in vscode 
-brew install ansible
+brew "pnpm"
+# for editing ansible in vscode 
+brew "ansible"
+brew "ansible-lint"
 
 # tools virtual machines and containers
 cask "docker"
@@ -33,8 +40,8 @@ cask "utm"
 cask "multipass"
 
 # tools for working with kubernetes
-brew install --cask lens
-brew install k9s
+cask "lens"
+brew "k9s"
 
 # tools for office work
 # cask "libreoffice"
