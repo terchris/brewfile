@@ -1,0 +1,67 @@
+# File: https://github.com/terchris/brewfile/tecmacwork
+# Description: Sets up essential tools on a new Mac
+#
+# Usage:
+#   curl -O https://raw.githubusercontent.com/terchris/brewfile/main/tecmacwork
+#   brew bundle --file=tecmacwork
+
+# === HOMEBREW SETUP ===
+tap "homebrew/bundle"
+tap "homebrew/cask"
+
+# === Web Browsers ===
+cask "google-chrome"
+cask "firefox"
+# cask "opera"  # Optional
+
+# === General Utilities ===
+brew  "midnight-commander"
+brew  "wget"
+cask  "sublime-text"
+cask  "visual-studio-code"
+cask  "github"
+# cask "warp"  # Optional terminal
+
+# === Development Tools ===
+cask "postman"
+brew  "nvm"
+brew  "yarn"
+# brew  "pnpm"  # Optional: alternative package manager
+
+# NVM Setup (manual step):
+# Add the following to your shell config (~/.zshrc or ~/.bash_profile):
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+# Then run:
+#   nvm install --lts
+#   nvm use --lts
+
+# === Ansible & Linting ===
+brew "ansible"
+brew "ansible-lint"
+
+# === Virtualization & Containers ===
+cask "rancher"
+# cask "docker"     # Commented to avoid conflicts with Docker Desktop policies
+# cask "utm"        # Optional VM
+# cask "multipass"  # Optional lightweight VM
+
+# === Kubernetes Tools ===
+brew "k9s"
+
+# === Office Software ===
+# cask "libreoffice"  # Optional
+
+# === Communication Tools ===
+cask "messenger"
+cask "whatsapp"
+
+# === Image Editing ===
+cask "gimp"
+
+# === Remote Access ===
+# cask "microsoft-remote-desktop"  # Optional
+
+# === File Sharing ===
+# cask "dropbox"  # Optional
