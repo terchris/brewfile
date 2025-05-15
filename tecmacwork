@@ -8,8 +8,8 @@
 # === HOMEBREW SETUP ===
 # Purpose: These commands add repositories (taps) to Homebrew,
 # expanding the list of available formulas and casks.
-tap "homebrew/bundle" # Adds the 'brew bundle' command, allowing management of dependencies from a Brewfile.
-tap "homebrew/cask"   # Adds support for installing macOS applications (GUIs) and large binaries.
+#tap "homebrew/bundle" # Adds the 'brew bundle' command, allowing management of dependencies from a Brewfile.
+#tap "homebrew/cask"   # Adds support for installing macOS applications (GUIs) and large binaries.
 
 # === WEB BROWSERS ===
 # Purpose: Installs web browsers for internet access and web development.
