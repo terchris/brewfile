@@ -6,62 +6,145 @@
 #   brew bundle --file=tecmacwork
 
 # === HOMEBREW SETUP ===
-tap "homebrew/bundle"
-tap "homebrew/cask"
+# Purpose: These commands add repositories (taps) to Homebrew,
+# expanding the list of available formulas and casks.
+tap "homebrew/bundle" # Adds the 'brew bundle' command, allowing management of dependencies from a Brewfile.
+tap "homebrew/cask"   # Adds support for installing macOS applications (GUIs) and large binaries.
 
-# === Web Browsers ===
-cask "google-chrome"
-cask "firefox"
-# cask "opera"  # Optional
+# === WEB BROWSERS ===
+# Purpose: Installs web browsers for internet access and web development.
+cask "google-chrome"          # Google Chrome: A popular web browser known for its speed and extension ecosystem.
+cask "google-chrome-canary" # Google Chrome Canary: The early-release, experimental version of Google Chrome for developers and early adopters.
+cask "firefox"                # Mozilla Firefox: An open-source web browser focused on privacy and customization.
+cask "opera"                  # Opera: A web browser with features like a built-in VPN and ad blocker.
 
-# === General Utilities ===
-brew  "midnight-commander"
-brew  "wget"
-cask  "sublime-text"
-cask  "visual-studio-code"
-cask  "github"
-# cask "warp"  # Optional terminal
+# === GENERAL UTILITIES ===
+# Purpose: Installs a variety of command-line and GUI tools for general productivity and system interaction.
+brew  "midnight-commander"  # Midnight Commander: A visual file manager for the command line, offering a text-based user interface.
+brew  "wget"                # GNU Wget: A command-line utility for downloading files from the web.
+brew  "tree"                # Tree: A command-line utility that displays directory structures in a tree-like format.
+brew  "ripgrep"             # Ripgrep: A very fast command-line search tool that recursively searches directories for a regex pattern.
+cask  "sublime-text"        # Sublime Text: A sophisticated text editor for code, markup, and prose.
+cask  "visual-studio-code"  # Visual Studio Code (VS Code): A free, powerful source code editor with extensive features and extension support.
+cask  "github"              # GitHub Desktop: A GUI application for interacting with Git and GitHub repositories.
+cask  "cursor"              # Cursor: An AI-powered code editor, designed to help write, edit, and chat about code.
+cask  "activitywatch"       # ActivityWatch: An open-source automated time tracker that helps you monitor how you spend your time on your devices.
+# cask "warp"               # Warp: A modern, Rust-based terminal emulator with AI features and collaborative tools. (Optional)
 
-# === Development Tools ===
-cask "postman"
-brew  "nvm"
-brew  "yarn"
-# brew  "pnpm"  # Optional: alternative package manager
+# === DEVELOPMENT TOOLS ===
+# Purpose: Installs tools essential for software development.
+cask "postman"             # Postman: A platform for API development, used for designing, building, testing, and documenting APIs.
+brew  "nvm"                 # Node Version Manager (NVM): A command-line tool to manage multiple active Node.js versions.
+brew  "yarn"                # Yarn: A fast, reliable, and secure dependency manager for JavaScript.
+brew  "yq"                  # yq: A lightweight and portable command-line YAML, JSON, XML, CSV, and properties processor.
+# brew  "pnpm"              # pnpm: A fast, disk space-efficient package manager for JavaScript. (Optional: alternative package manager)
 
 # NVM Setup (manual step):
-# Add the following to your shell config (~/.zshrc or ~/.bash_profile):
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+# Purpose: These instructions configure your shell to use NVM,
+# allowing you to install and switch between Node.js versions.
+# export NVM_DIR="$HOME/.nvm" # Sets the directory where NVM stores Node.js versions.
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # Loads NVM into your shell session (path may vary based on Homebrew prefix).
+# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # Loads NVM bash completion (path may vary).
 # Then run:
-#   nvm install --lts
-#   nvm use --lts
+#   nvm install --lts        # Installs the latest Long-Term Support (LTS) version of Node.js.
+#   nvm use --lts            # Sets the LTS version of Node.js as the current version in your shell.
 
-# === Ansible & Linting ===
-brew "ansible"
-brew "ansible-lint"
+# === GIT UTILITIES ===
+# Purpose: Tools for advanced Git repository management.
+brew "BFG"                  # BFG Repo-Cleaner: A simpler, faster alternative to 'git-filter-branch' for cleaning bad data out of Git repository history.
 
-# === Virtualization & Containers ===
-cask "rancher"
-# cask "docker"     # Commented to avoid conflicts with Docker Desktop policies
-# cask "utm"        # Optional VM
-# cask "multipass"  # Optional lightweight VM
+# === ANSIBLE & LINTING ===
+# Purpose: Tools for IT automation and code quality checking for Ansible.
+brew "ansible"              # Ansible: An open-source automation tool for configuration management, application deployment, and task automation.
+brew "ansible-lint"         # Ansible Lint: Checks Ansible playbooks for practices and behavior that could potentially be improved.
 
-# === Kubernetes Tools ===
-brew "k9s"
+# === VIRTUALIZATION & CONTAINERS ===
+# Purpose: Tools for creating and managing virtual machines and containerized applications.
+cask "rancher"              # Rancher Desktop: An open-source application providing container and Kubernetes management on the desktop.
+# cask "docker"             # Docker Desktop: A tool to build, share, and run containerized applications. (Commented to avoid conflicts with Docker Desktop policies)
+# cask "utm"                # UTM: A full-featured system emulator and virtual machine host for iOS and macOS. (Optional VM)
+# cask "multipass"          # Multipass: A tool to launch and manage Ubuntu virtual machines with a single command. (Optional lightweight VM)
 
-# === Office Software ===
-# cask "libreoffice"  # Optional
+# === KUBERNETES TOOLS ===
+# Purpose: Tools for interacting with Kubernetes clusters.
+brew "k9s"                  # K9s: A terminal-based UI to manage Kubernetes clusters that aims to make it easier to navigate, observe, and manage your deployed applications.
 
-# === Communication Tools ===
-cask "messenger"
-cask "whatsapp"
+# === CLOUD SDKs & TOOLS ===
+# Purpose: Command-line tools and applications for interacting with cloud provider services.
+brew "azure-cli"            # Azure CLI: A command-line tool for managing Microsoft Azure resources.
+cask "microsoft-onedrive"   # Microsoft OneDrive: Cloud storage client for file synchronization and backup.
 
-# === Image Editing ===
-cask "gimp"
+# === AI & PRODUCTIVITY APPS ===
+# Purpose: Desktop applications for AI interaction and enhancing productivity.
+cask "chatgpt"              # ChatGPT: OpenAI's official desktop application for interacting with the ChatGPT AI model.
+cask "claude"               # Claude: Anthropic's official desktop application for interacting with the Claude AI model.
 
-# === Remote Access ===
-# cask "microsoft-remote-desktop"  # Optional
+# === OFFICE SOFTWARE ===
+# Purpose: Productivity software for document creation and editing.
+# cask "libreoffice"        # LibreOffice: A free and open-source office productivity suite. (Optional)
 
-# === File Sharing ===
-# cask "dropbox"  # Optional
+# === COMMUNICATION TOOLS ===
+# Purpose: Applications for messaging and team collaboration.
+cask "messenger"            # Messenger: Facebook's official desktop client for Messenger.
+cask "whatsapp"             # WhatsApp: A desktop application for the WhatsApp messaging service.
+cask "slack"                # Slack: A channel-based messaging platform for team communication and collaboration.
+cask "signal"               # Signal: A private messaging application with a focus on end-to-end encryption.
+cask "bluesky"              # Bluesky: A decentralized social networking application.
+
+# === MEDIA ===
+# Purpose: Applications for media playback and streaming.
+cask "gimp"                 # GIMP (GNU Image Manipulation Program): A free and open-source raster graphics editor for image editing.
+cask "spotify"              # Spotify: A digital music, podcast, and video streaming service.
+
+# === REMOTE ACCESS ===
+# Purpose: Tools for accessing and controlling remote computers.
+cask "microsoft-remote-desktop" # Microsoft Remote Desktop: An application to connect to remote Windows PCs and virtual apps.
+
+# === FILE SHARING ===
+# Purpose: Applications for cloud storage and file synchronization (OneDrive is now under Cloud SDKs & Tools).
+# cask "dropbox"            # Dropbox: A cloud storage service for file sharing and synchronization. (Optional)
+
+# === VS CODE EXTENSIONS ===
+# Purpose: These extend the functionality of Visual Studio Code for various languages, tools, and workflows.
+vscode "42crunch.vscode-openapi"                 # OpenAPI (Swagger) Editor: Provides rich OpenAPI editing and validation features.
+vscode "activitywatch.aw-watcher-vscode"         # ActivityWatch Watcher for VS Code: Tracks your activity within VS Code for time-tracking purposes.
+vscode "apollographql.vscode-apollo"             # Apollo GraphQL: Rich editor support for GraphQL, including IntelliSense, validation, and integration with Apollo services.
+vscode "bierner.markdown-mermaid"                # Markdown Mermaid: Adds Mermaid diagram and flowchart support to VS Code's Markdown preview.
+vscode "bierner.markdown-preview-github-styles" # Markdown Preview GitHub Styling: Styles the Markdown preview to match GitHub's styling.
+vscode "chekweitan.compare-view"                # Compare View: Allows side-by-side comparison of two files or text selections.
+vscode "codesandbox-io.codesandbox-projects"     # CodeSandbox Projects: Allows you to edit CodeSandbox projects directly in VS Code.
+vscode "davidanson.vscode-markdownlint"          # markdownlint: A Markdown linter to enforce style and consistency.
+vscode "dbaeumer.vscode-eslint"                  # ESLint: Integrates ESLint JavaScript and TypeScript linter into VS Code.
+vscode "donjayamanne.githistory"                 # Git History: View Git log, file history, compare branches or commits.
+vscode "dsznajder.es7-react-js-snippets"        # ES7+ React/Redux/React-Native snippets: Provides JavaScript and React/Redux snippets in ES7+ with Babel plugin features.
+vscode "eamodio.gitlens"                         # GitLens — Git supercharged: Enhances Git capabilities built into VS Code. Helps visualize code authorship, navigate history, etc.
+vscode "github.codespaces"                       # GitHub Codespaces: Connect to and develop in GitHub Codespaces.
+vscode "github.copilot"                          # GitHub Copilot: AI pair programmer that suggests code and entire functions in real-time.
+vscode "github.copilot-chat"                     # GitHub Copilot Chat: A chat interface for GitHub Copilot, allowing you to ask coding questions and get AI assistance.
+vscode "github.vscode-github-actions"            # GitHub Actions: View, manage, and run GitHub Actions workflows in VS Code.
+vscode "github.vscode-pull-request-github"       # GitHub Pull Requests and Issues: Allows you to review and manage GitHub pull requests and issues within VS Code.
+vscode "google.geminicodeassist"                 # Gemini Code Assist: Google's AI-powered coding assistant.
+vscode "grapecity.gc-excelviewer"                # GrapeCity Excel Viewer: View Excel spreadsheets and CSV files within VS Code.
+vscode "jock.svg"                                # SVG: Provides rich language support for SVG files, including live preview and IntelliSense.
+vscode "mikestead.dotenv"                        # DotENV: Support for .env file syntax.
+vscode "moshfeu.compare-folders"                 # Compare Folders: Compares two folders to identify differences in their contents.
+vscode "ms-azure-devops.azure-pipelines"         # Azure Pipelines: Syntax highlighting and autocompletion for Azure Pipelines YAML files.
+vscode "ms-azuretools.vscode-bicep"              # Bicep: Provides Bicep language support for authoring Azure Resource Manager templates.
+vscode "ms-dotnettools.csdevkit"                 # C# Dev Kit: A C# extension for VS Code that provides a rich development experience for .NET projects.
+vscode "ms-dotnettools.csharp"                   # C#: Official C# language support for VS Code (powered by OmniSharp).
+vscode "ms-dotnettools.vscode-dotnet-runtime"    # .NET Runtime Install Tool: Acquires .NET runtime for extensions.
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools" # Kubernetes: Develop, deploy and debug Kubernetes applications.
+vscode "ms-python.debugpy"                       # Debugpy: Python debugger for VS Code.
+vscode "ms-python.python"                        # Python: Official Python language support with linting, debugging, IntelliSense, etc.
+vscode "ms-python.vscode-pylance"                # Pylance: A performant, feature-rich language server for Python in VS Code.
+vscode "ms-vscode-remote.remote-containers"      # Dev Containers (formerly Remote - Containers): Allows you to use a Docker container as a full-featured development environment.
+vscode "mtxr.sqltools"                           # SQLTools - Database tools: Manage and explore databases like PostgreSQL, MySQL, SQL Server, etc.
+vscode "pkief.material-icon-theme"               # Material Icon Theme: Adds Material Design icons to files and folders in the explorer.
+vscode "pranaygp.vscode-css-peek"                # CSS Peek: Allows peeking to CSS ID and class strings as definitions from HTML files to respective CSS.
+vscode "rangav.vscode-thunder-client"            # Thunder Client: A lightweight Rest API Client Extension for Visual Studio Code.
+vscode "redhat.ansible"                          # Ansible: Ansible language support, including syntax highlighting, validation, and autocompletion.
+vscode "redhat.vscode-yaml"                      # YAML: YAML language support with validation and autocompletion, powered by YAML Language Server.
+vscode "ritwickdey.liveserver"                   # Live Server: Launch a local development server with live reload feature for static & dynamic pages.
+vscode "rogalmic.bash-debug"                     # Bash Debug: A debugger for Bash scripts.
+vscode "timonwong.shellcheck"                    # ShellCheck: Integrates the ShellCheck static analysis tool for shell scripts.
+vscode "yzane.markdown-pdf"                      # Markdown PDF: Converts Markdown files to PDF, HTML, png, or jpeg files.
